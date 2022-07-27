@@ -20,7 +20,7 @@ const Navbar = () => {
                 <h1 className='text-2xl sm:text-3xl lg:text-4xl'>
                     BEST<span className='font-bold'>Eats</span>
                 </h1>
-                <div className='hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]'>
+                <div className='hidden  lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]'>
                     <p className='bg-black text-white rounded-full p-2'>Delivery</p>
                     <p className='p-2'>Pickup</p>
                 </div>
@@ -36,7 +36,7 @@ const Navbar = () => {
             </button>
             {/* Mobile menu */}
             {/* sidebar menu */}
-            {nav && <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div>}
+            {nav && <div onClick={()=>{setNav(!nav)}} className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div>}
             {nav && <div className={nav ? 'fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300' : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300'}>
                 <AiOutlineClose onClick={()=>{setNav(!nav)}} size={30} className="absolute right-4 top-4 cursor-pointer" />
                 <h2 className='text-2xl p-4'>Best <span className='font-bold '>Eats</
